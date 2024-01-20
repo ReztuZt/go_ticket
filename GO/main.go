@@ -51,3 +51,31 @@ func PesanTiketHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(response)
 }
+
+
+// nek orddi
+// package main
+
+// import (
+// 	"html/template"
+// 	"net/http"
+// )
+
+// // Template untuk halaman utama
+// var templates = template.Must(template.ParseFiles("templates/index.html"))
+
+// // Handler untuk halaman utama
+// func indexHandler(w http.ResponseWriter, r *http.Request) {
+// 	if err := templates.ExecuteTemplate(w, "index.html", nil); err != nil {
+// 		http.Error(w, err.Error(), http.StatusInternalServerError)
+// 	}
+// }
+
+// func main() {
+// 	// Mengatur penanganan route
+// 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
+// 	http.HandleFunc("/", indexHandler)
+
+// 	// Menjalankan server di port 8080
+// 	http.ListenAndServe(":8080", nil)
+// }
